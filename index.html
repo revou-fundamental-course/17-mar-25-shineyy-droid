@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik - Kalkulator Matematik</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1><span class="brand">Katik</span> Kalkulator Matematik</h1>
+    </header>
+
+    <!-- Halaman Utama -->
+    <main id="home">
+        <h2>Welcome to Katik</h2>
+        <p>Hai Sobat, Selamat datang di Katik :)</p>
+        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+        <button onclick="showOptions('persegi')">Persegi</button>
+        <button onclick="showOptions('persegiPanjang')">Persegi Panjang</button>
+    </main>
+
+    <!-- Pilihan Perhitungan Persegi -->
+    <div id="options-persegi" class="hidden">
+        <h2>Pilih Perhitungan Persegi</h2>
+        <button onclick="showPage('kelilingPersegi')">Keliling Persegi</button>
+        <button onclick="showPage('luasPersegi')">Luas Persegi</button>
+    </div>
+
+    <!-- Pilihan Perhitungan Persegi Panjang -->
+    <div id="options-persegiPanjang" class="hidden">
+        <h2>Pilih Perhitungan Persegi Panjang</h2>
+        <button onclick="showPage('kelilingPersegiPanjang')">Keliling Persegi Panjang</button>
+        <button onclick="showPage('luasPersegiPanjang')">Luas Persegi Panjang</button>
+    </div>
+
+    <!-- Halaman Keliling Persegi -->
+    <div id="kelilingPersegi" class="hidden">
+        <h2>Keliling Persegi</h2>
+        <p>Rumus: K = 4 × S</p>
+        <input type="number" id="sisiKeliling" placeholder="Nilai Sisi">
+        <button onclick="hitungKelilingPersegi()">Hitung</button>
+        <p id="hasilKelilingPersegi"></p>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <!-- Halaman Luas Persegi -->
+    <div id="luasPersegi" class="hidden">
+        <h2>Luas Persegi</h2>
+        <p>Rumus: L = S × S</p>
+        <input type="number" id="sisiLuas" placeholder="Nilai Sisi">
+        <button onclick="hitungLuasPersegi()">Hitung</button>
+        <p id="hasilLuasPersegi"></p>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <!-- Halaman Keliling Persegi Panjang -->
+    <div id="kelilingPersegiPanjang" class="hidden">
+        <h2>Keliling Persegi Panjang</h2>
+        <p>Rumus: K = 2 × (P + L)</p>
+        <input type="number" id="panjangKeliling" placeholder="Panjang">
+        <input type="number" id="lebarKeliling" placeholder="Lebar">
+        <button onclick="hitungKelilingPersegiPanjang()">Hitung</button>
+        <p id="hasilKelilingPersegiPanjang"></p>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <!-- Halaman Luas Persegi Panjang -->
+    <div id="luasPersegiPanjang" class="hidden">
+        <h2>Luas Persegi Panjang</h2>
+        <p>Rumus: L = P × L</p>
+        <input type="number" id="panjangLuas" placeholder="Panjang">
+        <input type="number" id="lebarLuas" placeholder="Lebar">
+        <button onclick="hitungLuasPersegiPanjang()">Hitung</button>
+        <p id="hasilLuasPersegiPanjang"></p>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
